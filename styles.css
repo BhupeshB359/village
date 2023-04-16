@@ -1,0 +1,381 @@
+/*
+Initialization by bhupesh 
+components used:
+flexbox
+animation
+transform
+HTML and CSS only single page drawing.
+
+*/
+:root {
+    --background-sun1: linear-gradient(orange, rgba(255, 255, 0, 0.899), rgba(255, 255, 0, 0.729));
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+ 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;   
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.background {
+    width: 100%;
+    height: 100%;
+ background: linear-gradient(135deg, aliceblue, skyblue);
+}
+.sun {
+    position: absolute;
+    top: 50px;
+    right: 500px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(255, 174, 0),orangered);
+}
+
+.clouds-1 {
+    transform: scale(0.8);
+    display: flex;
+    top: 10px;
+    position: absolute;
+    left: 300px;
+}
+.clouds {
+    transform: scale(0.9);
+    display: flex;
+}
+.cloud {
+    box-shadow: 4px 0px 2px 2px bisque;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+}
+.cloud-1 {
+    border-radius: 50% 50% 20% 50%;
+    top: 80px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+}
+.cloud-2 {
+    border-radius: 50% 60% 10% 40%;
+    left: 10px;
+    top: 80px;
+    width: 100px;
+    height: 100px;
+}
+.cloud-3 {
+    border-radius: 50% 50% 50% 0%;
+    left: -10px;
+    top: 80px;
+    width: 100px;
+    height: 100px;
+}
+.mountains {
+    height: 60%;
+    width: 100%;
+    top: 0px;
+}
+.mountain0,.mountain01,.mountain02,.mountain-1, .mountain-2, .mountain-3, .mountain-4 {
+    height: 10px;
+    width: 10px;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    position: absolute;
+}
+.mountain0 {
+    border-bottom: 400px solid green;
+    left: -170px;
+    bottom: 31%;
+}
+.mountain01 {
+    border-bottom: 300px solid green;
+        left: 70px;
+        bottom: 30%;
+}
+.mountain02 {
+    border-bottom: 200px solid green;
+    left: 310px;
+    bottom: 30%;
+}
+.mountain-1 {
+    left: -170px;
+    bottom: 30%;
+    border-bottom: 400px solid chartreuse;
+}
+.mountain-3 {
+    left: 60px;
+    bottom: 30%;
+    border-bottom: 300px solid chartreuse;
+}
+.mountain-4 {
+    left: 300px;
+    bottom: 30%;
+    border-bottom: 200px solid chartreuse;
+}
+.side {
+    position: absolute;
+    bottom: 33%;
+    right: 0px;
+    width: 60%;
+    height: 20%;
+    border-top: 10px solid green;
+    border-radius: 600% 5% 10px 10px;
+    background-color: chartreuse;
+}
+.road {
+    display: flex;
+    position: absolute;
+    bottom: 30%;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    z-index: 999;
+}
+.road > .dots {
+    width: 10px;
+    height: 3px;
+    margin: 10px 5px;
+    background-color: white;
+}
+.tree-1 {
+    transform: scale(0.8);
+    width: 100px;
+    height: 300px;
+    position: absolute;
+    right: 160px;
+    top: -223px;
+}
+.tree {
+    width: 100px;
+    height: 300px;
+    position: absolute;
+    right: 10px;
+    top: -244px;
+}
+.root {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30%;
+}
+.roots {
+    border-radius: 0px 0px 100% 100%;
+    height: 100%;
+    background-color: brown;
+    width: 10px;
+}
+.root-1 {
+    transform: rotate(45deg);
+}
+.root-2 {
+    transform: rotate(20deg);
+}
+.root-4 {
+    transform: rotate(-20deg);
+}
+.root-5 {
+    transform: rotate(-45deg);
+}
+.trunk {
+    position: absolute;
+    bottom: 47px;
+    left: 11px;
+    background-color: brown;
+    width: 30px;
+    height: 100px;
+}
+.hole {
+    width: 13px;
+    height: 16px;
+    border-radius: 40%;
+    background-color: brown;
+}
+.hole-1 {
+    box-shadow: -2px 3px 0px 3px chocolate;
+    top: 0px;
+    margin: 10px;
+}
+.hole-2 {
+    box-shadow: 2px 3px 0px 3px chocolate;
+    top: 50px;
+    left: 4px;
+    position: absolute;
+}
+.branch {
+    transform: rotate(180deg) scaleX(-1);
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    height: 30%;
+}
+.branches {
+    border-radius: 0px 0px 100% 100%;
+    height: 100%;
+    background-color: brown;
+    width: 10px;
+}
+.branch-1 {
+    transform: rotate(45deg);
+}
+.branch-2 {
+    transform: rotate(20deg);
+} 
+.branch-4 {
+    transform: rotate(-20deg);
+} 
+.branch-5 {
+    transform: rotate(-45deg);
+
+}
+.leaves {
+    border-radius: 46% 54% 46% 54% / 75% 71% 29% 25% ; 
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: -66px;
+    width: 160%;
+    top: -10%;
+    height: 40%;
+}
+.leaf {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 100% 10% 100% 5%;
+}
+.windmill {
+    z-index: 998;
+    width: 100px;
+    height: 240px;
+    position: absolute;
+    top: -180px;
+    right: 400px;
+}
+.base {
+    overflow: hidden;
+    border-radius: 10% 10% 0% 0%;
+    flex-wrap: wrap;
+    gap: 2%;
+    display: flex;
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 0px;
+    background-color:bisque;
+}
+.stone {
+    margin: 1px;
+    width: 10%;
+    height: 10%;
+    background-color: black;
+}
+.hall {
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+    width: 60%;
+    height: 50%;
+}
+.window {
+    border: 1px solid black;
+    left: 30%;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: chocolate
+}
+.window-1 {
+    top: 5px;
+}
+.window-2 {
+    top: 30px;
+}
+.window-3 {
+    top: 55px;
+}
+.door {
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+    width: 60%;
+    border-radius: 50% 50% 0% 0%;
+    height: 35px;
+    background-color: brown;
+}
+.top {
+    background-color: black;
+    width: 86%;
+    height: 20%;
+    border-radius: 51% 49% 0% 100% / 100% 100% 0% 0% ;
+    border: 2px solid black;
+    bottom: 65%;
+    left: 7%;
+    position: absolute;
+}
+.trident {
+    background-color: orangered;
+    width: 20%;
+    height: 50%;
+    position: absolute;
+    left: 40%;
+    top: -55%;
+    border-radius: 50% 50% 0% 0%;
+}
+.fan {
+    position: absolute;
+    top: -10px;
+    left: -23px;
+    width: 140px;
+    height: 140px;
+}
+@-webkit-keyframes fans {  
+    from {    
+        -webkit-transform: rotate(0deg);  
+    }  
+    to {    
+        -webkit-transform: rotate(360deg);  
+    }
+} 
+
+.fan > img {
+    animation: fans 1s infinite linear;
+    z-index: 999;
+    width: 140px;
+    height: 140px;
+}
+.lake {
+    height: 30%;
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    background-color: turquoise;
+    border-top: 10px solid green;
+    border-radius: 600% 5% 10px 10px;
+}
+
+@media only screen and (max-width: 1075px) {
+    .background,body,html,.container {  
+        width: 100%;
+        height: 100%; 
+ background-color: black;
+    }
+}
