@@ -364,7 +364,7 @@ body {
 }
 .lake {
     height: 30%;
-    width: 40%;
+    width: 800px;
     position: absolute;
     right: 0px;
     background-color: turquoise;
