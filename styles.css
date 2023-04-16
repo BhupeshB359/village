@@ -142,11 +142,10 @@ body {
     border-bottom: 2px solid white;
     z-index: 999;
 }
-.road > .dots {
-    width: 10px;
+.road > .dot {
+    width: 100%;
+    background: repeating-linear-gradient( transparent 0px, transparent 10px, white 10px, white 20px);
     height: 3px;
-    margin: 10px 5px;
-    background-color: white;
 }
 .tree-1 {
     transform: scale(0.8);
