@@ -40,7 +40,14 @@ body {
     border-radius: 50%;
     background: radial-gradient(rgb(255, 174, 0),orangered);
 }
-
+@keyframes marquee {
+    from {
+    right : 0;
+    }
+    to {
+    right : 1000px;
+    }
+}
 .clouds-1 {
     transform: scale(0.8);
     display: flex;
@@ -49,6 +56,7 @@ body {
     left: 300px;
 }
 .clouds {
+    animation: marquee 2s infinite ease-in-out;
     transform: scale(0.9);
     display: flex;
 }
